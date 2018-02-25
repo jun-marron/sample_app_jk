@@ -1,5 +1,7 @@
 SampleAppJk::Application.routes.draw do
+  get "users/show"
   devise_for :users
+  resources :users, only: [:show]
   root  'static_pages#home'
   # root to: "home#index"
   match '/help',    to: 'static_pages#help',    via: 'get'
