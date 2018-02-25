@@ -1,4 +1,5 @@
 SampleAppJk::Application.routes.draw do
+  devise_for :users
   root  'static_pages#home'
   # root to: "home#index"
   match '/help',    to: 'static_pages#help',    via: 'get'
